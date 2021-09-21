@@ -1,9 +1,12 @@
 import React from 'react'
+import Title from '../components/Title'
 
 const Cryptocurrencies = () => {
     return (
         <div>
-            CryptoCurrencies
+            <Title>
+            Cryptocurrencies
+            </Title>
         </div>
     )
 }

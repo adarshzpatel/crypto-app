@@ -1,9 +1,10 @@
 import React from 'react'
+import Title from '../components/Title'
 
 const Exchanges = () => {
     return (
         <div>
-            Exchanges
+           <Title> Exchanges </Title>
         </div>
     )
 }

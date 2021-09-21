@@ -4,11 +4,11 @@ import Nav from './Nav'
 
 const Layout = ({children}) => {
     return (
-        <div>
+        <div className='flex min-h-screen w-screen'>
             <Nav/>
-            <div>
+            <div className='flex-1 flex flex-col'>
             {/* Main */}
-                <div>
+                <div className='flex-1'>
                     {children}
                 </div>
                 <Footer/>

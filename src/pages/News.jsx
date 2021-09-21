@@ -1,9 +1,10 @@
 import React from 'react'
+import Title from '../components/Title'
 
 const News = () => {
     return (
         <div>
-            news
+            <Title>News</Title>
         </div>
     )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
+import Title from '../components/Title'
 
 const Homepage = () => {
     return (
         <div>
-            Homepages
+            <Title>HomePage</Title>
         </div>
     )
 }
