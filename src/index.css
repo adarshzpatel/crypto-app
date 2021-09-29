@@ -2,3 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base{
+    #crypto-description>h3{
+        @apply font-semibold text-lg py-4;
+    }
+    #crypto-description>p>a{
+        @apply text-blue-600 hover:text-blue-600 underline;
+    }
+}
+
+@layer components{
+    .activeTab{
+        @apply font-semibold rounded-lg focus:outline-none shadow bg-white  w-full;
+    }
+    .tab{
+        @apply w-full py-1 text-gray-500 hover:bg-gray-100 rounded-lg hover:text-gray-600;
+    }
+}
