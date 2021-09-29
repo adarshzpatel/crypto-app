@@ -32,7 +32,7 @@ const Cryptocurrencies = ({ simplified }) => {
             <Title>Cryptocurrencies</Title>)}
 
           {!simplified && (
-            <div className="mb-4 focus:outline-none border-gray-500 rounded place">
+            <div className="mb-4 focus:outline-none border-gray-500 rounded ">
               <input
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -44,48 +44,48 @@ const Cryptocurrencies = ({ simplified }) => {
           )}
         </div>
 
-        <div className=" ">
           <p className='text-xs text-gray-600'>*Click on the coin name to view details.</p>
-          <table className="min-w-full divide-y divide-gray-300 shadow-lg rounded-lg  overflow-hidden">
-            <thead className="bg-gray-200 ">
+        <div className="rounded-lg overflow-hidden">
+          <table className="w-full divide-y divide-gray-300 shadow-lg">
+            <thead className="bg-blue-600  text-white overflow-x-scroll scrollbar-w-2">
               <tr>
                 <th
                   scope="col"
-                  className="px-4 lg:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  className="px-2 md:px-4 lg:px-6 py-2 text-left text-xs font-medium uppercase tracking-wider"
                 >
                   #
                 </th>
                 <th
                   scope="col"
-                  className="px-4 lg:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  className="px-2 md:px-4 lg:px-6 py-2 text-left text-xs font-medium uppercase tracking-wider"
                 >
                   Name
                 </th>
                 <th
                   scope="col"
-                  className="px-4 lg:px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  className="px-2 md:px-4 lg:px-6 py-2 text-center text-xs font-medium uppercase tracking-wider"
                 >
                   Price
                 </th>
                 <th
                   scope="col"
-                  className="px-4 lg:px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  className="px-2 md:px-4 lg:px-6 py-2 text-center text-xs font-medium uppercase tracking-wider"
                 >
                   Daily Change
                 </th>
                 <th
                   scope="col"
-                  className="px-4 lg:px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  className="px-2 md:px-4 lg:px-6 py-2 text-center text-xs font-medium  uppercase tracking-wider"
                 >
                   Market Cap
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200 ">
+            <tbody className="bg-white divide-y divide-gray-200 overflow-x-scroll scrollbar-w-2 ">
               {cryptos?.map((coin) => (
                 <tr key={coin.uuid} className=" ">
                   {/* Rank */}
-                  <td className="px-4 lg:px-6 py-4">
+                  <td className="px-2 md:px-4">
                     <div className="flex items-center">
                       <div className="flex-shrink-0 h-full text-sm lg:text-lg font-medium">
                         {coin.rank}.
@@ -93,7 +93,7 @@ const Cryptocurrencies = ({ simplified }) => {
                     </div>
                   </td>
                   {/*Name & Icon */}
-                  <td className="px-4 lg:px-6 py-4 ">
+                  <td className="px-2 md:px-4 py-2 ">
                     <Link
                       to={`/crypto/${coin.id}`}
                       as="div"
@@ -110,17 +110,17 @@ const Cryptocurrencies = ({ simplified }) => {
                         <div className="font-medium text-gray-900">
                           {coin.name}
                         </div>
-                        <div className=" font-medium text-gray-500">
+                        <div className=" font-medium text-xs md:text-sm text-gray-500">
                           {coin.symbol}
                         </div>
                       </div>
                     </Link>
                   </td>
                   {/* Price */}
-                  <td className="px-4 lg:px-6 py-4 text-gray-800  font-medium text-center">
+                  <td className="px-2 md:px-4 py-2 text-gray-800 text-sm md:text-base  font-medium text-center">
                     <div>${millify(coin.price)}</div>
                   </td>
-                  <td className="px-4 lg:px-6 py-4 font-medium text-center">
+                  <td className="px-2 md:px-4 py-2 font-medium  text-sm md:text-base text-center">
                     <div
                       className={
                         coin.change < 0 ? "text-red-500" : "text-green-500"
@@ -129,7 +129,7 @@ const Cryptocurrencies = ({ simplified }) => {
                       {millify(coin.change)}%
                     </div>
                   </td>
-                  <td className="px-4 lg:px-6 py-4  text-gray-800 font-medium text-center">
+                  <td className="px-2 md:px-4 py-2 text-gray-800 text-sm md:text-base font-medium text-center">
                     <div>${millify(coin.marketCap)}</div>
                   </td>
                 </tr>

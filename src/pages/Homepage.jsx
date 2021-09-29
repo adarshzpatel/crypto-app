@@ -17,7 +17,6 @@ const Homepage = () => {
 
   if(!isFetching){
     const globalStats = data?.data?.stats;
-    console.log(globalStats)
     return (
       <div className='p-4 lg:p-8 '>
       <Title>Global Crypto Stats</Title>

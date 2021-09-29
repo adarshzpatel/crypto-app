@@ -25,7 +25,7 @@ const CryptoDetails = () => {
     timePeriod,
   });
   const cryptoDetails = data?.data?.coin;
-  console.log(cryptoDetails);
+
   if (isFetching) {
     return <Loading />;
   }
@@ -73,7 +73,7 @@ const CryptoDetails = () => {
   ];
 
   return (
-    <div className="p-8 lg:p-12 flex flex-col gap-4">
+    <div className="p-4 lg:p-8 flex flex-col gap-4">
       <div className="flex gap-2 items-center ">
         <span>
           <img
@@ -136,10 +136,7 @@ const CryptoDetails = () => {
             </div>
           </Tab.Panel>
         </Tab.Panels>
-      </Tab.Group>
-
-
-    
+      </Tab.Group>    
  
     </div>
   );

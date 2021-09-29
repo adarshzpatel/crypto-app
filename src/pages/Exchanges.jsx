@@ -10,7 +10,6 @@ import millify from "millify";
 const Exchanges = () => {
   const { data, isFetching } = useGetCryptoExchangesQuery();
   const exchanges = data?.data?.exchanges;
-  console.log(exchanges);
 
   if (isFetching) {
     return <Loading />;
