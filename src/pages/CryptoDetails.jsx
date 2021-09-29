@@ -7,15 +7,14 @@ import {
   useGetCryptoDetailsQuery,
   useGetCryptoHistoryQuery,
 } from "../services/cryptoApi";
+
 import Loading from "../components/Loading";
 import LineChart from "../components/CryptoDetailsPage/LineChart";
 import StatCard from "../components/StatCard";
 import { Tab } from "@headlessui/react";
 import {Link} from 'react-router-dom'
 import {ExternalLinkIcon} from '@heroicons/react/outline'
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+
 
 const CryptoDetails = () => {
   const { coinId } = useParams();

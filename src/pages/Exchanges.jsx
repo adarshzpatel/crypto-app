@@ -4,7 +4,7 @@ import { useGetCryptoExchangesQuery } from "../services/cryptoApi";
 import Loading from "../components/Loading";
 import { Disclosure, Transition } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/outline";
-import HTMLReactParser from "html-react-parser";
+
 import millify from "millify";
 
 const Exchanges = () => {
