@@ -10,11 +10,11 @@ const navItems = [
 
 const Footer = () => {
   return (
-    <div className="bg-gray-200 w-full text-center py-4 text-gray-700">
+    <div className="bg-gray-200 w-full text-center text-sm md:text-base px-4 py-4 text-gray-700">
       <p>
         CryptoLand <br /> All rights reserved.
       </p>
-      <div className="flex gap-4 justify-center">
+      <div className="flex  gap-4 justify-center">
         {navItems.map((item) => (
           <Link
             className="hover:text-blue-600 hover:font-medium"

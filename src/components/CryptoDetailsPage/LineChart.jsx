@@ -56,7 +56,9 @@ const LineChart = ({ coinHistory, color,timePeriod,setTimePeriod }) => {
           ))}
         </select>
       </div>
+      <div className='min-h-full'>
       <Line data={data} options={options} />
+      </div>
     </div>
   );
 };

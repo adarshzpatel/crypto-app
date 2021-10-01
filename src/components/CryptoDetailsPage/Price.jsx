@@ -8,13 +8,13 @@ const Price = ({ price, change }) => {
         <h2 className="flex uppercase tracking-wider font-medium text-gray-500 mb-2">
           Price
         </h2>
-        <h3 className="text-4xl font-semibold">${roundedPrice}</h3>
+        <h3 className="text-2xl md:text-4xl font-semibold">${roundedPrice}</h3>
       </div>
       <div>
         <h2 className="text-right uppercase tracking-wider  font-medium text-gray-500 mb-2">
           24h Change
         </h2>
-        <h6 className="flex gap-1 font-semibold text-3xl  items-center ">
+        <h6 className="flex gap-1 font-semibold text-xl md:text-3xl  items-center ">
           <span className={change >= 0 ? "text-green-500" : "text-red-600"}>
             {change} %{" "}
           </span>
